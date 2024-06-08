@@ -1,0 +1,13 @@
+{
+"WPS":"wifi protected setup",
+"UDP":"user datagramm protocol",
+"TCP":"transmission control protocol",
+"FDM":"frequency devision multiplex",
+"TDM":"time devision multiplex",
+"CSMA":"carier sense multiple access",
+"MDF":"main distribution frame",
+"IDF":"intemidiate distribution frame",
+"MDI":"medium dependant inteface", 
+"MDIX":"medium dependant inteface crossconnect",
+"8P8C":"eight points eight contacts",
+"PDU":"protocol data unit"}
