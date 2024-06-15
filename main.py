@@ -1,6 +1,7 @@
 import os
 import globals
 import json
+import random
 from colorama import init, Fore, Back, Style
 
 # _______f(x)____
@@ -21,15 +22,29 @@ def initialize(filez):
    
     while not val.isdigit() or int(val) > len(filez):
         globals.clean()
-        val = input(Fore.RED + Back.BLACK + "INVALID ENTRY!! " + Fore.GREEN + "Try again:\n" + Style.RESET_ALL + Fore.YELLOW + str(filez).replace("{","").replace("}","") +"\n" + Style.RESET_ALL)
+        val = input(Fore.RED + Back.BLACK + "INVALID ENTRY!! " + Fore.GREEN + "Try again:\n" + Style.RESET_ALL + Fore.YELLOW + str(filez).replace("{","").replace("}","") +"\n" + Fore.LIGHTWHITE_EX)
    
     return val
 
-def ke
+def main_loop():
+    prev_answer = ""
+    while len(working_dict) > 0:
+        globals.clean()
+        question = random.choice(list(working_dict.keys()))
+        prev_answ_update = working_dict[question]
+        print(f"The right answer for the previous question is: {prev_answer}")
+        answer = input(Back.BLACK + Fore.BLUE + Style.BRIGHT + f"What does {question} stands for?\n" + Fore.YELLOW + Style.NORMAL)
+        prev_answer = prev_answ_update
+        if answer == working_dict[question]:
+            del working_dict[question]
+  
+    print(Fore.GREEN + "YOU MADE IT!")
+
 # ___var___
 files = list_files()
 working_dict = {} 
-
+key_nums = {}
+score = 0
 # flow
 globals.clean()
 
@@ -38,3 +53,6 @@ with open(f'./json/{files[int(initialize(files))]}', 'r') as f:
     raw_data = f.read()
     working_dict = json.loads(raw_data)
 
+main_loop()
+        
+        
