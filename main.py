@@ -1,5 +1,4 @@
 import os
-import globals
 import json
 import random
 from colorama import init, Fore, Back, Style
@@ -31,25 +30,32 @@ def initialize(filez):
     return val
 
 def main_loop():
-    prev_answer = Fore.RED + "none"
+    '''renders screens, sets logic'''
+    prev_answer = Fore.RED + Style.BRIGHT + "none"
     while len(working_dict) > 0:
         clean()
         question = random.choice(list(working_dict.keys()))
         prev_answ_update = working_dict[question]
         print(f"The right answer for the previous question is: {prev_answer}")
-        answer = input(Fore.BLUE + Style.BRIGHT + ask + question + Fore.WHITE + Style.NORMAL +"\n")
-        prev_answer = Fore.GREEN + prev_answ_update
+        answer = input(Fore.BLUE + Style.BRIGHT + ask + question + Fore.WHITE + Style.NORMAL +"\n").lower()
+        prev_answer = Fore.RED + Style.BRIGHT + prev_answ_update
         if answer == working_dict[question]:
             del working_dict[question]
-  
+            prev_answer = Fore.GREEN + Style.BRIGHT + prev_answ_update
     print(Fore.GREEN + "YOU MADE IT!")
+
+def whats_the_question():
+    '''extracts the question var from the dictionary and makes it separate variable'''
+    ask = working_dict["question"]
+    del working_dict['question']
 
 # ___var___
 files = list_files()
+ask=""
 working_dict = {} 
 key_nums = {}
 score = 0
-# flow
+#___flow___
 clean()
 
 # populates dictionary using selected file
@@ -57,9 +63,7 @@ with open(f'./json/{files[int(initialize(files))]}', 'r') as f:
     raw_data = f.read()
     working_dict = json.loads(raw_data)
 
-print(working_dict['question'])
-ask = working_dict["question"]
-del working_dict['question']
+whats_the_question()
 
 main_loop()
         
