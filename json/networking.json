@@ -7,7 +7,7 @@
 "CSMA":"carier sense multiple access",
 "MDF":"main distribution frame",
 "IDF":"intemidiate distribution frame",
-"MDI":"medium dependant inteface", 
-"MDIX":"medium dependant inteface crossconnect",
+"MDI":"medium dependant interface", 
+"MDIX":"medium dependant interface crossconnect",
 "8P8C":"eight points eight contacts",
 "PDU":"protocol data unit"}

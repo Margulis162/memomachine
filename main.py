@@ -27,14 +27,14 @@ def initialize(filez):
     return val
 
 def main_loop():
-    prev_answer = ""
+    prev_answer = Fore.RED + "none"
     while len(working_dict) > 0:
         globals.clean()
         question = random.choice(list(working_dict.keys()))
         prev_answ_update = working_dict[question]
         print(f"The right answer for the previous question is: {prev_answer}")
         answer = input(Back.BLACK + Fore.BLUE + Style.BRIGHT + f"What does {question} stands for?\n" + Fore.YELLOW + Style.NORMAL)
-        prev_answer = prev_answ_update
+        prev_answer = Fore.GREEN + prev_answ_update
         if answer == working_dict[question]:
             del working_dict[question]
   

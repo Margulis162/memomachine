@@ -1,0 +1,23 @@
+{
+    "ICMP":"7",
+    "FTP default data":"20", 
+    "FTP control":"21",
+    "SSH":"22",
+    "telnet":"23",
+    "SMTP":"25",
+    "DNS":"53",
+    "DHCP/BootP service":"67",
+    "DHCP/BootP client":"68",
+    "TFTP":"69",
+    "NTP":"123",
+    "POP-3":"110",
+    "Netbios Naming Service:":"137",
+    "IMAP/4":"143",
+    "SNMP":"161",
+    "LDAP":"389",
+    "HTTPS":"443",
+    "IPSec":"500",
+    "RDP":"3389",
+    "NNTP":"119",
+    "HTTP":"80"
+}
