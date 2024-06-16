@@ -58,7 +58,6 @@ def main_loop():
 
         print(stat_bar)
         print(underline.center(screen_size) +"\n")
-        print(stat_str.format(left = "hello", right = 'Bye').center(screen_size))
         answer = input(qw_str.center(screen_size) + "\n" + (screen_size//2 - 10) * " ").lower()
         prev_answer = Fore.RED + Style.BRIGHT + prev_answ_update
         if answer == working_dict[question]:
