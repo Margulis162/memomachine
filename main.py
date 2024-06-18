@@ -47,8 +47,6 @@ def main_loop():
         clean()
         question = random.choice(list(working_dict.keys()))
         prev_answ_update = working_dict[question]
-
-        # rht_answ = "The right answer for the previous question is: " + prev_answer
         rht_answ = "The right answer for the previous question is: " + prev_answer
         qw_remains = Style.RESET_ALL + "There are " + Fore.YELLOW + str(len(working_dict))+ Style.RESET_ALL + " questions left"
         
