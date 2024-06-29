@@ -12,7 +12,8 @@
     "TFTP":"69",
     "NTP":"123",
     "POP-3":"110",
-    "Netbios Naming Service:":"137",
+    "Netbios Naming Service 1:":"137",
+    "Netbios Naming Service 2:":"139",
     "IMAP/4":"143",
     "SNMP":"161",
     "LDAP":"389",
@@ -20,5 +21,13 @@
     "IPSec":"500",
     "RDP":"3389",
     "NNTP":"119",
-    "HTTP":"80"
+    "HTTP":"80",
+    "SIR 1":"5060",
+    "SIR 2": "5061",
+    "MGCP":"2427",
+    "MGCP 2":"2727",
+    "H.323":"1720",
+    "SMB":"445",
+    "RTP": "5004",
+    "RTP 2":"5005"
 }

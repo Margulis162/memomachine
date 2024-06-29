@@ -8,7 +8,6 @@ from colorama import init, Fore, Back, Style
 def clean():
     '''console cleaner'''
     os.system('cls' if os.name == 'nt' else 'clear')
- 
 
 def list_files():
     '''makes a dict of avalible json files for study'''
@@ -36,7 +35,7 @@ def initialize(filez):
         print( invalid_str.center(screen_size))
         print( (Style.RESET_ALL + Fore.YELLOW + str(filez).replace("{","").replace("}","")).center(screen_size))
         val = input((screen_size//2 - 10) * " ")
-   
+
     return val
 
 
@@ -47,8 +46,6 @@ def main_loop():
         clean()
         question = random.choice(list(working_dict.keys()))
         prev_answ_update = working_dict[question]
-
-        # rht_answ = "The right answer for the previous question is: " + prev_answer
         rht_answ = "The right answer for the previous question is: " + prev_answer
         qw_remains = Style.RESET_ALL + "There are " + Fore.YELLOW + str(len(working_dict))+ Style.RESET_ALL + " questions left"
         
@@ -86,7 +83,7 @@ stat_str ="{left:<80}{right:>80}"
 #___flow___
 clean()
 
-# populates dictionary using selected file
+''' populates dictionary using selected file'''
 with open(f'./json/{files[int(initialize(files))]}', 'r') as f:
     raw_data = f.read()
     working_dict = json.loads(raw_data)
@@ -95,4 +92,5 @@ whats_the_question()
 
 main_loop()
         
+'''when there is no more questions qw_remains should show 0 instead of 1'''
         
