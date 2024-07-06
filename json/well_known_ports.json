@@ -15,8 +15,10 @@
     "Netbios Naming Service 1:":"137",
     "Netbios Naming Service 2:":"139",
     "IMAP/4":"143",
-    "SNMP":"161",
+    "SNMP manager":"161",
+    "SNMP agent":"162",
     "LDAP":"389",
+    "LDAPS":"636",
     "HTTPS":"443",
     "IPSec":"500",
     "RDP":"3389",
@@ -29,5 +31,12 @@
     "H.323":"1720",
     "SMB":"445",
     "RTP": "5004",
-    "RTP 2":"5005"
+    "RTP 2":"5005",
+    "SMTPS 1": "465",
+    "SMTPS 2":"587",
+    "POP3S":"995",
+    "IMAPS":"993",
+    "Microsoft SQL":"1433",
+    "MySQL":"3306",
+    "Syslog":"514"
 }
