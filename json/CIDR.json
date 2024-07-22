@@ -1,0 +1,11 @@
+{
+  "question":"What is ",
+  "/30":"Subnet: 64, IP: 4",
+  "/29":"Subnet: 32, IP: 8",
+  "/28":"Subnet: 16, IP: 16",
+  "/27":"Subnet: 8, IP: 32",
+  "/26":"Subnet: 4, IP: 64",
+  "/25":"Subnet: 2, IP: 128",
+  "/24":"Subnet: 1, IP: 256",
+  "/23":"Subnet: 2, IP: 512"
+}
