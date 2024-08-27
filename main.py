@@ -4,7 +4,7 @@ import random
 import shutil
 from colorama import init, Fore, Back, Style
 
-# _______f(x)____
+# _______f(x)___________
 def clean():
     '''console cleaner'''
     os.system('cls' if os.name == 'nt' else 'clear')
